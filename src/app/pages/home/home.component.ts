@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
 
     let tl = gsap.timeline({
       repeat: -1,
-      yoyo: true,
-      delay: 1,
+      yoyo: false,
+      delay: 0.5,
     })
     let tl2 = gsap.timeline({
       defaults: {
@@ -27,14 +27,25 @@ export class HomeComponent implements OnInit {
       }
     })
 
-    tl2.from('.left, .right', { y: -20, opacity: 0, ease: 'power4' })
-    tl.from('#girl',
-    {
+    tl2.from('.left, .right, #about', { y: -20, opacity: 0, ease: 'power4' })
+    tl.to('#wave', {
+      scale: 7,
+      transformOrigin: 'center',
+      opacity: 0,
+      duration: 10,
+      ease: 'power4'
+    })
+
+    gsap.from('.card', {
+      scale: 0.8,
+      stagger: 0.08,
       scrollTrigger: {
-        trigger: "#girl",
-        scrub: true
+        trigger: '#about',
+        toggleActions: "play pause resume reset",
+        scrub: true,
+        start: '+=300 bottom',
+        end: 'center center'
       },
-      y: 200,
     })
   }
 

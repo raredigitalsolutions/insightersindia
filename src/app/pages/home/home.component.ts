@@ -36,17 +36,34 @@ export class HomeComponent implements OnInit {
       ease: 'power4'
     })
 
-    gsap.from('.card', {
+    gsap.from('#about .card', {
       scale: 0.8,
-      stagger: 0.08,
+      y:  60,
+      stagger: 0.2,
       scrollTrigger: {
+        // markers: true,
         trigger: '#about',
         toggleActions: "play pause resume reset",
         scrub: true,
-        start: '+=300 bottom',
-        end: 'center center'
+        start: 'top bottom ',
+        end: 'bottom bottom'
       },
     })
+
+    gsap.from('#service .card', {
+      scale: 0.9,
+      y:  30,
+      stagger: 0.2,
+      scrollTrigger: {
+        // markers: true,
+        trigger: '#service',
+        toggleActions: "play pause resume reset",
+        scrub: true,
+        start: 'top+30 bottom',
+        end: 'bottom bottom'
+      },
+    })
+
   }
 
 }

@@ -43,6 +43,9 @@
   padding: 2rem;
 }
 
+.top {
+  padding: 1rem 2rem;
+}
 // .left {
 //   // background-color: red;
 // }
@@ -57,7 +60,7 @@
 
 .top {
   width: 100%;
-  background-color: #160c28;
+  background-color: #080708;
   grid-column: 1/3;
   display: flex;
   align-items: center;
@@ -97,6 +100,7 @@
 
   .container {
     display: grid;
+    overflow: hidden;
     gap: 0.3em;
     grid-template-columns: auto auto auto auto;
     margin-top: 2em;
@@ -139,6 +143,110 @@
   border-top: 2px purple solid;
 }
 
+// service
+#service {
+  text-align: center;
+  margin: 3rem 0;
+  h2 {
+    font-size: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.3em;
+  }
+  .container {
+    overflow: hidden;
+    background-color: #f5f0f6;
+    margin: 5vh 2em;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0.4em;
+    border-radius: 1.5em;
+    display: grid;
+    justify-content: center;
+    gap: 0.2rem;
+    // border: 0.2rem #F5F0F6 solid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+
+    .card {
+      background-color: rgba(255, 255, 255);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      // height: 100%;
+
+      .mask {
+        // position: absolute;
+        box-sizing: border-box;
+        padding: 2rem;
+        background-color: white;
+        transition: 0.2s ease-out;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        overflow: visible;
+        align-items: center;
+
+        h3 {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+        .cta {
+          // margin: 0;
+          width: fit-content;
+          background-color: #ff3c38;
+          font-size: medium;
+        }
+      }
+
+      .mask:hover {
+        // background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .card-1 {
+      background-image: url("../../../assets/services/nlp-training.svg");
+    }
+    .card-2 {
+      background-image: url("../../../assets/services/psychometric-test.svg");
+    }
+    .card-3 {
+      background-image: url("../../../assets/services/stress-management.svg");
+    }
+    .card-4 {
+      background-image: url("../../../assets/services/self-management.svg");
+    }
+    .card-5 {
+      background-image: url("../../../assets/services/goal-setting.svg");
+    }
+    .card-6 {
+      background-image: url("../../../assets/services/og-interventions.svg");
+    }
+    .card-7 {
+      background-image: url("../../../assets/services/time-management.svg");
+    }
+    .card-8 {
+      background-image: url("../../../assets/services/coaching-mentoring.svg");
+    }
+    .card-9 {
+      background-image: url("../../../assets/services/business-consultancy.svg");
+    }
+    .card-10 {
+      background-image: url("../../../assets/services/law-of-attraction.svg");
+    }
+    .card-11 {
+      background-image: url("../../../assets/services/emotional-intelligence.svg");
+    }
+    .card-12 {
+      background-image: url("../../../assets/services/motivational-training.svg");
+    }
+  }
+}
 @media (max-width: 1300px) {
   #about {
     .container {
@@ -148,6 +256,12 @@
         grid-column: 2/3;
         grid-row: 2/3;
       }
+    }
+  }
+
+  #service {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
@@ -197,6 +311,12 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
+  #service {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 
 @media (max-width: 675px) {
@@ -217,6 +337,26 @@
     .container {
       display: flex;
       flex-direction: column;
+    }
+  }
+
+  #service {
+    .container {
+      margin-left: 0.4rem;
+      margin-right: 0.4rem;
+      grid-template-columns: 1fr;
+      .mask {
+          padding: 1rem;
+          h3 {
+            font-size: 1.2rem
+          }
+      }
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      padding: 0 5vw;
     }
   }
 }

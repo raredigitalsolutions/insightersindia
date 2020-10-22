@@ -29,93 +29,109 @@
 
 #start {
   // height: 100vh;
+  box-shadow: rgba(255, 255, 255, 1) 0px 0px 0.4em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
+  background-image: url("../../../assets/images/home.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 3em;
   gap: 2em;
-  h2 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    font-size: 2.5rem;
-    margin: 0;
-    padding: 0;
-  }
-  p {
-    font-size: 1.3rem;
-    margin-bottom: 2em;
-  }
-}
 
-.left,
-.right,
-.top {
-  padding: 2rem;
-}
+  .left,
+  .right,
+  .top {
+    padding: 2rem;
+  }
 
-.top {
-  padding: 1rem 2rem;
-}
-.left {
-  // background-color: red;
-  box-sizing: border-box;
-  height: fit-content;
-  overflow: hidden;
-  .content {
-    padding: 1em 0;
-    height: fit-content;
+  .top {
+    padding: 1rem 2rem;
+  }
+
+  .left {
     box-sizing: border-box;
+    height: fit-content;
     overflow: hidden;
-  }
-}
-.right {
-  background-color: rgb(255, 255, 250);
-  border-radius: 3em;
-  .transform {
-    width: 40vw;
-  }
-}
 
-.top {
-  width: 100%;
-  background-color: #f3f3f3;
-  grid-column: 1/3;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  .logo,
-  .banner {
-    height: 3em;
+    padding: 3em;
   }
-  .logo {
-    margin-left: 2em;
-    margin-right: 1em;
+  .right {
+    height: clamp(350px, 70vh, 500px);
+    border-radius: 3em;
+    .transform {
+      border-radius: 1em;
+      width: 40vw;
+      transition: all 0.2s ease-in-out;
+
+      background-color: rgb(255, 255, 250);
+      height: 100%;
+      background-image: url("../../../assets/images/positive.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0.4em;
+    }
+  }
+
+  .top {
+    width: 100%;
+    background-color: #f3f3f3;
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    .logo,
+    .banner {
+      height: 3em;
+    }
+    .logo {
+      margin-left: 2em;
+      margin-right: 1em;
+    }
   }
 }
-
 // about
 #about {
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.4em;
+
   min-height: 100vh;
   // display: grid;
   // place-items: center;
   text-align: center;
+  background-image: url("../../../assets/images/about-us.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 0 2rem;
-  margin-top: 3rem;
-  h2 {
-    font-size: 2.5rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
+  // margin-top: 3rem;
 
-  p {
-    font-size: 1.3em;
-  }
+  .title {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    padding-top: 0;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255);
+    border-top: 1px blue solid;
+    color: white;
+    h2 {
+      font-size: 2.5rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
 
+    p {
+      font-size: 1.3em;
+    }
+  }
   .container {
     display: grid;
     overflow: hidden;
@@ -224,7 +240,8 @@
       .mask:hover {
         // background-color: transparent;
         background-color: rgba(0, 0, 0, 0.7);
-        h3, p{
+        h3,
+        p {
           color: #ddd;
         }
       }
@@ -299,17 +316,22 @@
     }
     justify-content: center;
   }
+  #start {
+    .right {
+      // width: 100%;
+      grid-row: 2/3;
+      // background-color: rosybrown;
+      height: clamp(250px, 40vh, 350px);
+      display: flex;
+      justify-content: center;
 
-  .right {
-    grid-row: 2/3;
-    .transform {
-      width: clamp(250px, 40vw, 800px);
-      padding: 0;
+      .transform {
+        width: clamp(500px, 60vw, 600px);
+      }
     }
-  }
-
-  .left {
-    max-width: 500px;
+    .left {
+      max-width: 500px;
+    }
   }
 
   #start {
@@ -350,10 +372,20 @@
         margin: 0 auto;
       }
     }
+    .right {
+      padding-top: 0;
+    }
   }
   #about {
-    h2 {
-      font-size: 1.8rem;
+    padding: 0;
+    .title {
+      margin: 2rem 0 1rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 0;
+      // border: none;
+      h2 {
+        font-size: 1.8rem;
+      }
     }
     .container {
       display: flex;

@@ -13,13 +13,13 @@ export class HomeComponent implements OnInit {
   constructor() {
     gsap.registerPlugin(ScrollTrigger)
   }
-  banner2: string
-  banner1: string
-  banner3: string
+
   ngOnInit(): void {
-    this.banner2 = 'none'
-    this.banner1 = 'visible'
-    this.banner3 = 'none'
+
+  }
+
+  ngAfterViewInit() {
+
     let tl = gsap.timeline({
       repeat: -1,
       yoyo: false,
@@ -36,56 +36,6 @@ export class HomeComponent implements OnInit {
         duration: 1
       }
     })
-    // tl3.from('.content ', {
-    //   // scale: 1.6,
-    //   ease: 'power2',
-    //   y: 700,
-    //   repeat: -1,
-    //   onRepeat: () => {
-    //     let list = [
-    //       this.banner1,
-    //       this.banner2,
-    //       this.banner3
-    //     ]
-    //     let i = 1
-    //     let changed = false
-    //     for (let index = 1; index <= list.length; index++) {
-    //       let banner = document.getElementById('banner' + i)
-    //       let next_banner = document.getElementById('banner' + (i + 1))
-    //       if (next_banner != null) {
-    //         if (!banner.classList.contains('none')) {
-    //           banner.classList.add('none')
-    //           banner.classList.remove('visible')
-
-    //           next_banner.classList.remove('none')
-    //           next_banner.classList.add('visible')
-    //         }
-    //       }
-
-    //     }
-    //     // for (const key in list) {
-    //     //   if (Object.prototype.hasOwnProperty.call(list, key)) {
-    //     //     let val = eval('this.banner' + i++)
-    //     //     if (val == 'visible' && changed == false) {
-    //     //       eval('this.banner' + i + ' = "visible"')
-    //     //       eval('this.banner' + (i - 1) + ' = "none"')
-    //     //       if (!document.getElementById('banner' + (i - 1)).classList.contains('none')) {
-    //     //         document.getElementById('banner').classList.add('visible')
-    //     //       }
-    //     //       changed = true
-    //     //       console.log(i, 'not énd');
-    //     //     } else if (changed == false && i == list.length) {
-    //     //       eval('this.banner' + 1 + ' = "visible"')
-    //     //       eval('this.banner' + (i - 1) + ' = "none"')
-    //     //       console.log(i, 'énd');
-    //     //     }
-    //     //   }
-    //     // }
-    //   },
-    //   repeatDelay: 5,
-    //   duration: 1,
-    //   delay: 0.8
-    // })
 
     tl2.from('.left, .right, #about', { y: -20, opacity: 0, ease: 'power4' })
     tl.to('#wave', {
@@ -143,15 +93,4 @@ export class HomeComponent implements OnInit {
 
   }
 
-  getBanner() {
-    return this.banner1
-  }
-  bannerSwap() {
-    let list = [
-      this.banner2,
-      this.banner1
-    ]
-    this.banner1 = "none"
-
-  }
 }

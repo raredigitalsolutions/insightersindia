@@ -1,9 +1,5 @@
-import { style } from '@angular/animations';
-import { flatten } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { strict } from 'assert';
 import { gsap } from 'gsap';
-import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-banner',
@@ -19,8 +15,19 @@ export class BannerComponent implements OnInit {
   ngOnInit(): void {
     this.setup_banners()
 
+  }
+
+  ngAfterViewInit() {
+    let obs = new IntersectionObserver((entries, callback) => {
+      entries.forEach(entry => {
+        let intersection = entry.intersectionRatio
+        if (intersection > 0.7) { this.tl.restart(true) } else { this.tl.pause() }
+      })
+    }, { threshold: [0.2, 0.7] })
+
+    obs.observe(document.querySelector('.left'))
+
     this.tl.from('.content ', {
-      // scale: 1.6,
       ease: 'power4',
       y: 700,
       repeat: -1,
@@ -28,7 +35,6 @@ export class BannerComponent implements OnInit {
       onRepeat: () => {
         let unchanged = true
         for (let i = 1; i <= this.banner_count; i++) {
-
           let banner = document.getElementById('banner' + i)
           let next_banner = document.getElementById('banner' + (i + 1))
           if (next_banner != null && unchanged) {
@@ -44,7 +50,6 @@ export class BannerComponent implements OnInit {
               link = document.getElementById("banner_link" + (i))
               this.link_inactive(link)
 
-              // console.log('normal');
               unchanged = false
               break
             }
@@ -63,18 +68,19 @@ export class BannerComponent implements OnInit {
             this.link_active(link)
             link = document.getElementById("banner_link" + (i))
             this.link_inactive(link)
-            // console.log('not normal');
+
             unchanged = false
             break
           }
         }
-
       },
       repeatDelay: 5,
       duration: 2.5,
       delay: 0
     })
+
   }
+
 
   reset_banners() {
     let banners = document.querySelectorAll('.content');
@@ -94,20 +100,18 @@ export class BannerComponent implements OnInit {
       let link = document.createElement('a')
 
       link.id = "banner_link" + i
-      link.setAttribute('style', "cursor:pointer; text-align:center; padding: 0.3em 0.6em; color: white; background-color: #ff3c38; border-radius: 1em; text-decoration: none")
+      link.setAttribute('style', "cursor:pointer; text-align:center; padding: 0.3em 0.6em; color: white; background-color: #292929; border-radius: 1em; text-decoration: none")
       link.style.transitionDuration = '0.5s'
       link.style.width = '1em'
       link['(click)'] = "this.banner_seek(" + i + ")"
       link.addEventListener('click', (e) => {
 
-        console.log(e.target);
         let target = <HTMLElement>e.target
         let id = parseInt(target.id.slice(-1))
         this.banner_seek(id)
 
       })
 
-      console.log(link);
 
       container.appendChild(link)
 
@@ -120,7 +124,6 @@ export class BannerComponent implements OnInit {
         this.link_active(link)
         changed = true
       }
-      // console.log(banner);
     })
 
   }
@@ -135,7 +138,7 @@ export class BannerComponent implements OnInit {
         let banners = document.querySelectorAll('.content');
         let i = 1
         banners.forEach(banner => {
-          let link = document.getElementById('banner_link'+i)
+          let link = document.getElementById('banner_link' + i)
           if (i == bannerId) {
             banner.classList.add('visible')
             banner.classList.remove('none')
@@ -162,14 +165,14 @@ export class BannerComponent implements OnInit {
   }
 
   link_active(link) {
-    link.style.backgroundColor = '#FFF275'
+    link.style.backgroundColor = '#ff3c38'
     link.style.color = 'black'
     link.style.fontWeight = '700'
 
   }
 
   link_inactive(link) {
-    link.style.backgroundColor = '#ff3c38'
+    link.style.backgroundColor = '#292929'
     link.style.color = 'white'
     link.style.fontWeight = '500'
   }

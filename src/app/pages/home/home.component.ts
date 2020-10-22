@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
-import { Back, Power4, ScrollToPlugin, ScrollTrigger } from 'gsap/all';
+import { Back, ScrollTrigger } from 'gsap/all';
 
 @Component({
   selector: 'app-home',
@@ -46,7 +46,12 @@ export class HomeComponent implements OnInit {
       ease: 'power4'
     })
 
-    tl2.to('#logo', {
+    tl2.from('.logo-cube', {
+      scale:4,
+      transformOrigin: 'center',
+      ease: 'powrer4',
+      duration: 1.5
+    }).to('#logo', {
       rotate: 360,
       transformOrigin: 'center',
       ease: Back.easeInOut,

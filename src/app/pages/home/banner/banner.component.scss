@@ -7,9 +7,7 @@
 .display-none {
   display: none;
 }
-.active {
-  background-color: yellow !important;
-}
+
 .none {
   // display: none;
   opacity: 0;
@@ -18,8 +16,6 @@
   transition: 1s ease-out;
 }
 
-.visible {
-}
 * {
   h2 {
     font-family: "Montserrat", sans-serif;

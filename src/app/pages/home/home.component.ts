@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
       ease: 'power4'
     })
 
-    tl2.from('.logo-cube', {
+    tl2.from('.logo-cube ', {
       scale:4,
       transformOrigin: 'center',
       ease: 'powrer4',

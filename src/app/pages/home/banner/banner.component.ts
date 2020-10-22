@@ -20,12 +20,13 @@ export class BannerComponent implements OnInit {
   ngAfterViewInit() {
     let obs = new IntersectionObserver((entries, callback) => {
       entries.forEach(entry => {
-        let intersection = entry.intersectionRatio
-        if (intersection > 0.7) { this.tl.restart(true) } else { this.tl.pause() }
-      })
-    }, { threshold: [0.2, 0.7] })
+        let flag = entry.isIntersecting
 
-    obs.observe(document.querySelector('.left'))
+        if (flag) { this.tl.resume() } else { this.tl.pause() }
+      })
+    })
+
+    obs.observe(document.querySelector('#banner_link1'))
 
     this.tl.from('.content ', {
       ease: 'power4',

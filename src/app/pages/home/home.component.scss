@@ -60,6 +60,7 @@
   }
   .right {
     height: clamp(350px, 70vh, 500px);
+
     border-radius: 3em;
     .transform {
       border-radius: 1em;
@@ -395,6 +396,7 @@
       }
     }
     .right {
+      height: 350px;
       padding-top: 0;
     }
   }

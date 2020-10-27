@@ -1,0 +1,64 @@
+.parallax {
+  position: relative;
+  background-color: #272727;
+  .image {
+    height: 100vh;
+    background-color: #f50400;
+    // background-image: url('../../../../assets/images/mask-bg.jpg');
+    background-image: url("../../../../assets/images/pexels-jaymantri-4941.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    // mask: url('../../../../assets/mask/mask.svg');
+    // // mask-size: 60vh;
+    // mask-position: center;
+    // margin: 0 20vw;
+    // mask-repeat: no-repeat;
+    // position: relative;
+    h1 {
+      font-family: "Montserrat";
+      font-weight: 900;
+      font-size: 8rem;
+      color: transparent;
+    }
+    background-clip: text;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .any {
+    // position: absolute;
+    width: 100%;
+    top: 0;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      // max-height: 220px;
+      height: 20vh;
+    }
+  }
+}
+@media (min-width: 2000px) {
+  .parallax {
+    .image {
+      h1 {
+      font-size: 4rem;
+
+      }
+      font-size: 4rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .parallax {
+    .image {
+      h1 {
+        font-size: 15vw;
+        }
+    }
+  }
+}

@@ -2,13 +2,14 @@
   position: relative;
   background-color: #272727;
   .image {
-    height: 100vh;
+    padding-top: 3rem;
+    min-height: 100vh;
     background-color: #f50400;
     background-image: url("../../../../assets/images/mask-bg.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    h1 {
+    h2 {
       font-family: "Montserrat";
       font-weight: 900;
       font-size: 8rem;
@@ -35,7 +36,7 @@
 @media (min-width: 2000px) {
   .parallax {
     .image {
-      h1 {
+      h2 {
       font-size: 4rem;
 
       }
@@ -47,7 +48,7 @@
 @media (max-width: 900px) {
   .parallax {
     .image {
-      h1 {
+      h2 {
         font-size: 15vw;
         }
     }

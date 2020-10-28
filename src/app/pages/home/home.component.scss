@@ -296,6 +296,58 @@
     }
   }
 }
+
+#partners {
+  background-image: url("../../../assets/images/partners.jpg");
+  background-size: cover;
+  background-position: center;
+  .container {
+    display: grid;
+    grid-template-columns: 30% auto;
+    .text {
+      width: fit-content;
+      padding: 2.5rem;
+      h2 {
+        margin: 0;
+        background-color: #f3f3f3;
+        border-radius: 0.6rem;
+        padding: 1.8rem;
+        font-weight: 800;
+        font-size: 3.5rem;
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+    .cards {
+      padding: 2rem;
+      // background-color: #ff3c38;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      .card {
+        border-radius: 0.8rem;
+        transition: all 0.2s ease-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 10%;
+        background-color: #f3f3f3;
+        img {
+          width: 100%;
+          margin: 1em 0;
+        }
+        h4 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.4rem;
+        }
+      }
+      .card:hover {
+        transform: scale(1.05);
+        background-color: #ffff;
+      }
+    }
+  }
+}
 @media (max-width: 1300px) {
   #about {
     .container {
@@ -311,6 +363,20 @@
   #service {
     .container {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  #partners {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+      .text {
+        width: auto;
+        text-align: center;
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+      }
     }
   }
 }
@@ -393,6 +459,19 @@
   }
 }
 
+@media (max-width: 900px) {
+  #partners {
+    .container {
+      .text {
+        text-align: center;
+      }
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
 @media (max-width: 675px) {
   #start {
     .left {
@@ -443,6 +522,20 @@
     }
     p {
       padding: 0 5vw;
+    }
+  }
+
+  #partners {
+    .container {
+      .text {
+        h2 {
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+      }
+      .cards {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
 }

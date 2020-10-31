@@ -20,31 +20,14 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit() {
 
-    let tl = gsap.timeline({
-      repeat: -1,
-      yoyo: false,
-      delay: 0.5,
-    })
     let tl2 = gsap.timeline({
       defaults: {
         duration: 1
       }
     })
 
-    let tl3 = gsap.timeline({
-      defaults: {
-        duration: 1
-      }
-    })
 
     tl2.from('.left, .right, #about', { y: -20, opacity: 0, ease: 'power4' })
-    tl.to('#wave', {
-      scale: 7,
-      transformOrigin: 'center',
-      opacity: 0,
-      duration: 10,
-      ease: 'power4'
-    })
 
     tl2.from('.logo-cube ', {
       scale:4,
@@ -79,6 +62,20 @@ export class HomeComponent implements OnInit {
         scrub: true,
         start: 'top bottom ',
         end: 'bottom bottom'
+      },
+    })
+
+    gsap.from('#partners .card', {
+      scale: 0.8,
+      y: 60,
+      stagger: 0.2,
+      scrollTrigger: {
+        // markers: true,
+        trigger: '#partners',
+        toggleActions: "play pause resume reset",
+        scrub: true,
+        start: 'top bottom ',
+        end: 'center center'
       },
     })
 

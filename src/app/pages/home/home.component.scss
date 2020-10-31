@@ -34,6 +34,7 @@
   align-items: start;
   justify-items: center;
   background-image: url("../../../assets/images/home.jpg");
+  background-attachment: fixed;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -105,6 +106,7 @@
   // place-items: center;
   text-align: center;
   background-image: url("../../../assets/images/about-us.jpg");
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -299,18 +301,21 @@
 
 #partners {
   background-image: url("../../../assets/images/partners.jpg");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   .container {
     display: grid;
     grid-template-columns: 30% auto;
+    align-items: center;
     .text {
       width: fit-content;
       padding: 2.5rem;
       h2 {
         margin: 0;
         background-color: #f3f3f3;
-        border-radius: 0.6rem;
+        border-radius: 1.6rem;
         padding: 1.8rem;
         font-weight: 800;
         font-size: 3.5rem;
@@ -339,6 +344,9 @@
         h4 {
           font-family: "Montserrat", sans-serif;
           font-size: 1.4rem;
+        }
+        p {
+          font-size: 1.2rem;
         }
       }
       .card:hover {

@@ -6,10 +6,11 @@ import { HomeComponent } from './home.component';
 import { LandingIllustrationComponent } from './landing-illustration/landing-illustration.component';
 import { BannerComponent } from './banner/banner.component';
 import { MaskComponent } from './mask/mask.component';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, LandingIllustrationComponent, BannerComponent, MaskComponent],
+  declarations: [HomeComponent, LandingIllustrationComponent, BannerComponent, MaskComponent, TeamComponent],
   imports: [
     CommonModule,
     HomeRoutingModule

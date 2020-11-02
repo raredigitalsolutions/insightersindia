@@ -17,7 +17,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  nav_mobile = gsap.timeline()
+  nav_mobile_flag = false
   ngAfterViewInit() {
 
     let tl2 = gsap.timeline({
@@ -30,7 +31,7 @@ export class HomeComponent implements OnInit {
     tl2.from('.left, .right, #about', { y: -20, opacity: 0, ease: 'power4' })
 
     tl2.from('.logo-cube ', {
-      scale:4,
+      scale: 4,
       transformOrigin: 'center',
       ease: 'powrer4',
       duration: 1.5
@@ -92,7 +93,33 @@ export class HomeComponent implements OnInit {
         end: 'bottom bottom'
       },
     })
-
   }
 
+  mobile_menu() {
+    console.log('menu', this.nav_mobile.reversed());
+
+    // if(!this.nav_mobile.reversed() && this.nav_mobile_flag){
+    //   this.nav_mobile.reverse()
+    // }
+    if (this.nav_mobile_flag) {
+      this.nav_mobile.to('.nav-mobile', {
+        opacity: 0,
+        display: 'none',
+        duration: 0.3,
+        ease: 'power'
+      })
+      this.nav_mobile_flag = false
+    }
+    else {
+
+      this.nav_mobile.to('.nav-mobile', {
+        opacity: 1,
+        display: 'block',
+        duration: 0.3,
+        ease: 'power'
+      })
+      this.nav_mobile_flag = true
+    }
+
+  }
 }

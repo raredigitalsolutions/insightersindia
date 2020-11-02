@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
   }
 
   mobile_menu() {
-    console.log('menu', this.nav_mobile.reversed());
+    // console.log('menu', this.nav_mobile.reversed());
 
     // if(!this.nav_mobile.reversed() && this.nav_mobile_flag){
     //   this.nav_mobile.reverse()

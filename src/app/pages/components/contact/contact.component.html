@@ -1,0 +1,110 @@
+
+<form [formGroup]="profileForm" (ngSubmit)="submit()">
+
+
+  <div class="input-container">
+    <label>
+      Name:
+      <input class="input" type="text" formControlName="name">
+    </label>
+    <div *ngIf="profileForm.controls['name'].touched &&
+           profileForm.controls['name'].invalid" class="alert-danger">
+      <div class="error" *ngIf="profileForm.controls['name'].errors &&
+            profileForm.controls['name'].errors.required">
+        Name is required.</div>
+      <div class="error" *ngIf="profileForm.controls['name'].invalid && !profileForm.controls['name'].errors.required">
+        Enter a valid Name (Greater than 4 characters)</div>
+    </div>
+    <div class="valid" *ngIf="!profileForm.controls['name'].invalid">
+      <img src="assets/check.svg" alt="">
+    </div>
+  </div>
+
+  <div class="input-container">
+    <label>
+      Email:
+      <input class="input" type="text" formControlName="email">
+    </label>
+    <div *ngIf="profileForm.controls['email'].touched &&
+         profileForm.controls['email'].invalid" class="alert-danger">
+      <div class="error" *ngIf="profileForm.controls['email'].errors &&
+          profileForm.controls['email'].errors.required">
+        Email id required.</div>
+      <div class="error"
+        *ngIf="profileForm.controls['email'].invalid && !profileForm.controls['email'].errors.required">
+        Enter a valid email</div>
+    </div>
+    <div class="valid" *ngIf="!profileForm.controls['email'].invalid">
+      <img src="assets/check.svg" alt="">
+    </div>
+  </div>
+
+  <div class="input-container">
+    <label>
+      Phone:
+      <input class="input" (keyup)="phone_validation()" type="number" formControlName="phone">
+    </label>
+    <div *ngIf="profileForm.controls['phone'].touched &&
+     profileForm.controls['phone'].invalid" class="alert-danger">
+      <div class="error" *ngIf="profileForm.controls['phone'].errors &&
+          profileForm.controls['phone'].errors.required">
+        Phone number required.</div>
+    </div>
+    <div class="error"
+      *ngIf="profileForm.controls['phone'].touched && !phone_valid && !profileForm.controls['phone'].errors ">
+      Enter a valid Phone Number (10 Digits)</div>
+
+    <div class="valid" *ngIf="phone_valid">
+      <img src="assets/check.svg" alt="">
+    </div>
+  </div>
+
+  <div class="input-container">
+    <label>
+      Subject:
+      <!-- <input class="input" type="text" formControlName="name"> -->
+      <select class="input" name="subject" (change)="drop_validation()" id="subject" formControlName="subject">
+        <option value="Pricing">NLP Training</option>
+        <option value="Course">Course</option>
+        <option value="Availability">Availability</option>
+        <option value="Enterprise Booking">Enterprise booking</option>
+        <option value="Others">Others</option>
+
+      </select>
+    </label>
+    <div class="error" *ngIf="!drop_valid && profileForm.controls['subject'].touched" >
+      Select a subject
+    </div>
+    <div class="valid"
+      *ngIf="drop_valid">
+      <img src="assets/check.svg" alt="">
+    </div>
+  </div>
+
+  <div class="input-container">
+    <label class="question">
+      Question:
+      <textarea class="input" type="number" formControlName="content"></textarea>
+    </label>
+    <div *ngIf="profileForm.controls['content'].touched &&
+         profileForm.controls['content'].invalid" class="alert-danger">
+      <div class="error" *ngIf="profileForm.controls['content'].errors &&
+         profileForm.controls['content'].errors.required">
+        Question Cannot be empty.</div>
+      <div class="error"
+        *ngIf="profileForm.controls['content'].invalid && !profileForm.controls['content'].errors.required">
+        Enter a Question with atleast 10 characters</div>
+    </div>
+
+    <div class="valid" *ngIf="!profileForm.controls['content'].invalid">
+      <img src="assets/check.svg" alt="">
+    </div>
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="(!profileForm.valid) || (!phone_valid) || disabled || !drop_valid">{{Submit}}</button>
+  </div>
+
+
+
+</form>

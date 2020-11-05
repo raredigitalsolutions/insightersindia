@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "insighters-india": {
+      "hosting": {
+        "insighters-india": [
+          "insighters-india"
+        ]
+      }
+    }
+  }
+}

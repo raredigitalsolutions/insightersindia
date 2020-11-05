@@ -121,8 +121,13 @@
               "devServerTarget": "insighters-india:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "insighters-india"
 }

@@ -8,10 +8,11 @@ import { MaskComponent } from './mask/mask.component';
 import { TeamComponent } from './team/team.component';
 import { ContactComponent } from './../components/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, ContactComponent],
+  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, ContactComponent, TestimonialsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

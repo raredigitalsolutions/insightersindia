@@ -65,22 +65,18 @@
 
   <div class="input-container">
     <label>
-      Subject:
-      <!-- <input class="input" type="text" formControlName="name"> -->
-      <select class="input" name="subject" (change)="drop_validation()" id="subject" formControlName="subject">
-        <option value="Pricing">NLP Training</option>
-        <option value="Course">Course</option>
-        <option value="Availability">Availability</option>
-        <option value="Enterprise Booking">Enterprise booking</option>
-        <option value="Others">Others</option>
-
-      </select>
+      City:
+      <input class="input" type="text" formControlName="city">
     </label>
-    <div class="error" *ngIf="!drop_valid && profileForm.controls['subject'].touched" >
-      Select a subject
+    <div *ngIf="profileForm.controls['city'].touched &&
+           profileForm.controls['city'].invalid" class="alert-danger">
+      <div class="error" *ngIf="profileForm.controls['city'].errors &&
+            profileForm.controls['city'].errors.required">
+        City is required.</div>
+      <div class="error" *ngIf="profileForm.controls['city'].invalid && !profileForm.controls['city'].errors.required">
+        Enter a valid Name (Greater than 3 characters)</div>
     </div>
-    <div class="valid"
-      *ngIf="drop_valid">
+    <div class="valid" *ngIf="!profileForm.controls['city'].invalid">
       <img src="assets/check.svg" alt="">
     </div>
   </div>
@@ -106,7 +102,7 @@
   </div>
 
   <div>
-    <button type="submit" [disabled]="(!profileForm.valid) || (!phone_valid) || disabled || !drop_valid">{{Submit}}</button>
+    <button type="submit" [disabled]="(!profileForm.valid) || (!phone_valid) || disabled">{{Submit}}</button>
   </div>
 
 

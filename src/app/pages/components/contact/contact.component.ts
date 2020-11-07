@@ -1,6 +1,5 @@
 import { FirebaseService } from './../../../services/firebase.service';
-import { NONE_TYPE } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -11,6 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   constructor(private fire_service: FirebaseService) { }
+
+  @Input('subject') subject: string = 'Insighters India'
   disabled = false
   phone_valid = false
   drop_valid = false
@@ -29,7 +30,7 @@ export class ContactComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('', [Validators.required, Validators.maxLength(10), Validators.minLength(10)]),
     content: new FormControl('', [Validators.required, Validators.minLength(10)]),
-    subject: new FormControl(NONE_TYPE, [Validators.required])
+    city: new FormControl('', [Validators.required, Validators.minLength(4)]),
   });
 
   ngOnInit(): void {
@@ -47,17 +48,19 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  drop_validation() {
-    this.drop_valid = true
-  }
   submit() {
+    this.Submit = 'Sending'
+    this.profileForm.disable()
+    this.disabled = true
 
-
-    this.fire_service.updateEnquiry(this.profileForm.getRawValue()).finally(()=>{
-      this.disabled = true
+    let data = <JSON>this.profileForm.getRawValue()
+    data['subject'] = this.subject
+    this.fire_service.updateEnquiry(data).finally(()=>{
       this.Submit = 'Submitted'
-      this.profileForm.disable()
+      alert('Your request has been submitted!')
     })
+
+    // console.log(data);
 
   }
 }

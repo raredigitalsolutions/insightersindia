@@ -55,9 +55,18 @@ export class ContactComponent implements OnInit {
 
     let data = <JSON>this.profileForm.getRawValue()
     data['subject'] = this.subject
-    this.fire_service.updateEnquiry(data).finally(()=>{
-      this.Submit = 'Submitted'
-      alert('Your request has been submitted!')
+    data['date'] = new Date()
+    this.fire_service.updateEnquiry(data).catch(() => {
+      alert('There was an error while processing Your request. We apologize for the inconvenience.')
+      this.disabled = false
+    }).then(() => {
+
+      if (!this.disabled) {
+        this.profileForm.enable()
+      } else {
+        this.Submit = 'Submitted'
+        alert('Your request has been submitted!')
+      }
     })
 
     // console.log(data);

@@ -6,7 +6,7 @@
 h2 {
   padding-top: 5rem;
   font-size: 2.5rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   text-align: center;
 }
 .cards {
@@ -69,9 +69,13 @@ h2 {
 }
 
 @media (max-width: 500px) {
+  .cards {
+    padding: 0.85rem;
+  }
   .card {
     img {
       height: 6rem;
+      right: -0.5rem;
     }
     p {
       font-size: 1rem;
@@ -85,5 +89,16 @@ h2 {
   }
   h2 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .cards {
+    padding: 0.2rem;
+  }
+  .card {
+    img {
+      right: 0rem;
+    }
   }
 }

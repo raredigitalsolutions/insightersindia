@@ -80,16 +80,16 @@ export class HomeComponent implements OnInit {
       },
     })
 
-    gsap.from('#service .card', {
+    gsap.from('#courses .card', {
       scale: 0.9,
       y: 30,
       stagger: 0.2,
       scrollTrigger: {
         // markers: true,
-        trigger: '#service',
+        trigger: '#courses',
         toggleActions: "play pause resume reset",
         scrub: true,
-        start: 'top+30 bottom',
+        start: 'top+30 center',
         end: 'bottom bottom'
       },
     })

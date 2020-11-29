@@ -2,6 +2,7 @@
   font-family: "Nunito", sans-serif;
   overflow-x: hidden;
   color: #111;
+  transition: all 0.1s ease-in-out;
 }
 .none {
   // display: none;
@@ -146,7 +147,8 @@
       position: fixed;
       bottom: 0;
       right: 0;
-      background-image: url("../../../assets/menubg.svg");
+      background: #ff3c38;
+      background: url("../../../assets/menubg.svg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -276,7 +278,7 @@
 }
 
 // service
-#service {
+#courses {
   text-align: center;
   margin: 3rem 0;
   padding-top: 5rem;
@@ -347,40 +349,40 @@
     }
 
     .card-1 {
-      background-image: url("../../../assets/services/nlp-training.jpg");
+      background-image: url("../../../assets/courses/nlp-training.jpg");
     }
     .card-2 {
-      background-image: url("../../../assets/services/psychometric-test.jpg");
+      background-image: url("../../../assets/courses/psychometric-test.jpg");
     }
     .card-3 {
-      background-image: url("../../../assets/services/stress-management.jpg");
+      background-image: url("../../../assets/courses/stress-management.jpg");
     }
     .card-4 {
-      background-image: url("../../../assets/services/self-management.jpg");
+      background-image: url("../../../assets/courses/self-management.jpg");
     }
     .card-5 {
-      background-image: url("../../../assets/services/goal-setting.jpg");
+      background-image: url("../../../assets/courses/goal-setting.jpg");
     }
     .card-6 {
-      background-image: url("../../../assets/services/og-interventions.jpg");
+      background-image: url("../../../assets/courses/od-intervention.jpg");
     }
     .card-7 {
-      background-image: url("../../../assets/services/time-management.jpg");
+      background-image: url("../../../assets/courses/time-management.jpg");
     }
     .card-8 {
-      background-image: url("../../../assets/services/coaching-mentoring.jpg");
+      background-image: url("../../../assets/courses/coaching-mentoring.jpg");
     }
     .card-9 {
-      background-image: url("../../../assets/services/business-consultancy.jpg");
+      background-image: url("../../../assets/courses/business-consultancy.jpg");
     }
     .card-10 {
-      background-image: url("../../../assets/services/law-of-attraction.jpg");
+      background-image: url("../../../assets/courses/law-of-attraction.jpg");
     }
     .card-11 {
-      background-image: url("../../../assets/services/emotional-intelligence.jpg");
+      background-image: url("../../../assets/courses/emotional-intelligence.jpg");
     }
     .card-12 {
-      background-image: url("../../../assets/services/motivational-training.jpg");
+      background-image: url("../../../assets/courses/motivational-training.jpg");
     }
   }
 }
@@ -437,7 +439,7 @@
         }
       }
       .card:hover {
-        transform: scale(1.05);
+        transform: scale(1.02) !important;
         background-color: #ffff;
       }
     }
@@ -467,7 +469,7 @@
     }
   }
 
-  #service {
+  #courses {
     .container {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -496,7 +498,7 @@
     .top {
       grid-column: 1/3;
       min-height: none;
-      justify-content: start;
+      // justify-content: start;
       // padding-left: 0;
       .logo,
       .banner {
@@ -528,6 +530,7 @@
       padding-top: 2em;
       padding: 2em 0.8rem;
     }
+    padding-top: 6rem;
   }
 
   #start {
@@ -551,7 +554,7 @@
     }
   }
 
-  #service {
+  #courses {
     .container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -614,7 +617,7 @@
     }
   }
 
-  #service {
+  #courses {
     .container {
       margin-left: 0.4rem;
       margin-right: 0.4rem;
@@ -657,10 +660,11 @@
   #start {
     .top {
       .nav-mobile {
-        background-color: #ff3c38;
+        background: #ff3c38;
         overflow: scroll;
         ol {
           display: flex;
+          flex-wrap: wrap;
           flex-direction: row;
           li {
             margin: 0 1rem;

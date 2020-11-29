@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../components/components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -12,11 +13,11 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, ContactComponent, TestimonialsComponent],
+  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, TestimonialsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    ReactiveFormsModule
+    ComponentsModule
   ]
 })
 export class HomeModule { }

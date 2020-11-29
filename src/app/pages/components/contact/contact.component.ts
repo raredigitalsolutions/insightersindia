@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { FirebaseService } from './../../../services/firebase.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -9,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private fire_service: FirebaseService) { }
+  constructor(private fire_service: FirebaseService, private route: ActivatedRoute ) { }
 
   @Input('subject') subject: string = 'Insighters India'
   disabled = false
@@ -34,7 +35,11 @@ export class ContactComponent implements OnInit {
   });
 
   ngOnInit(): void {
-
+    this.route.data.subscribe(data=>{
+      if(data.subject){
+        this.subject = data.subject
+      }
+    })
   }
 
   phone_validation() {

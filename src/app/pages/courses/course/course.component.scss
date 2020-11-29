@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+  color: #272727;
+  transition: all 0.3s ease-in-out;
+}
+
+.showcase {
+  min-height: 100vh;
+  // background: url(../../../../assets/courses/law-of-attraction-lg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: grid;
+  position: relative;
+  place-items: start;
+  overflow: hidden;
+  box-shadow: 0px 0px 2.31rem rgba($color: #000000, $alpha: 0.7);
+}
+.back {
+  width: fit-content;
+  // position: absolute;
+  // top: 4rem;
+  a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    span {
+      color: #f3f3f3;
+      margin-left: 0.5rem;
+    }
+    img {
+      height: 1.2rem;
+    }
+    .link {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: fit-content;
+      background-color: rgba(0, 0, 0, 0.259);
+      padding: 1rem;
+      padding-right: 1.6rem;
+      border-radius: 0.8rem;
+    }
+  }
+}
+.background-filter {
+  position: absolute;
+  background-color: #272727d0;
+  filter: blur(6rem);
+  transform: scale(1.1);
+
+  min-height: 100%;
+  width: 100%;
+}
+.container {
+  // position: absolute;
+  z-index: 3;
+  padding: 6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.3rem;
+    color: #f3f3f3;
+  }
+  p {
+    font-size: 1.2rem;
+    letter-spacing: 0.08rem;
+    max-width: 800px;
+    line-height: 1.6rem;
+    font-weight: 400;
+    text-align: justify;
+    color: #f3f3f3;
+  }
+
+}
+.enquire-link {
+  background-color: #ff3c38;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f3f3f3;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  width: fit-content;
+}
+.nlp-training {
+  background-image: url("../../../../assets/courses/nlp-training-lg.jpg");
+}
+.psychometric-test {
+  background-image: url("../../../../assets/courses/psychometric-test-lg.jpg");
+}
+.stress-management {
+  background-image: url("../../../../assets/courses/stress-management-lg.jpg");
+}
+.self-management {
+  background-image: url("../../../../assets/courses/self-management-lg.jpg");
+}
+.goal-setting {
+  background-image: url("../../../../assets/courses/goal-setting-lg.jpg");
+}
+.od-intervention {
+  background-image: url("../../../../assets/courses/od-intervention-lg.jpg");
+}
+.time-management {
+  background-image: url("../../../../assets/courses/time-management-lg.jpg");
+}
+.coaching-mentoring {
+  background-image: url("../../../../assets/courses/coaching-mentoring-lg.jpg");
+}
+.business-consultancy {
+  background-image: url("../../../../assets/courses/business-consultancy-lg.jpg");
+}
+.law-of-attraction {
+  background-image: url("../../../../assets/courses/law-of-attraction-lg.jpg");
+}
+.emotional-intelligence {
+  background-image: url("../../../../assets/courses/emotional-intelligence-lg.jpg");
+}
+.motivational-training {
+  background-image: url("../../../../assets/courses/motivational-training-lg.jpg");
+}
+
+.nlp-training-card {
+  background-image: url("../../../../assets/courses/nlp-training.jpg");
+}
+.psychometric-test-card {
+  background-image: url("../../../../assets/courses/psychometric-test.jpg");
+}
+.stress-management-card {
+  background-image: url("../../../../assets/courses/stress-management.jpg");
+}
+.self-management-card {
+  background-image: url("../../../../assets/courses/self-management.jpg");
+}
+.goal-setting-card {
+  background-image: url("../../../../assets/courses/goal-setting.jpg");
+}
+.od-intervention-card {
+  background-image: url("../../../../assets/courses/od-intervention.jpg");
+}
+.time-management-card {
+  background-image: url("../../../../assets/courses/time-management.jpg");
+}
+.coaching-mentoring-card {
+  background-image: url("../../../../assets/courses/coaching-mentoring.jpg");
+}
+.business-consultancy-card {
+  background-image: url("../../../../assets/courses/business-consultancy.jpg");
+}
+.law-of-attraction-card {
+  background-image: url("../../../../assets/courses/law-of-attraction.jpg");
+}
+.emotional-intelligence-card {
+  background-image: url("../../../../assets/courses/emotional-intelligence.jpg");
+}
+.motivational-training-card {
+  background-image: url("../../../../assets/courses/motivational-training.jpg");
+}
+.carousel {
+  z-index: 2;
+}
+.carousel-container {
+  padding: 6rem;
+
+  .carousel-cell {
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3f3f3;
+    cursor: default !important;
+    border-radius: 20px;
+    text-align: center;
+    a {
+      text-decoration: none;
+      background-color: #ff3c38;
+      font-size: 1.1rem;
+      color: #f3f3f3;
+      font-weight: 700;
+      padding: 0.8rem 1.5rem;
+      border-radius: 2rem;
+      transition: all 0.2s ease-in-out;
+      // margin-top: 3rem;
+    }
+    :hover {
+      transform: scale(1.07);
+    }
+    img {
+      height: 50%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .title {
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+}
+
+.content {
+  padding: 6rem;
+  p {
+    margin: 3rem 0;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    text-align: justify;
+    font-weight: 300;
+  }
+  li {
+    line-height: 1.8rem;
+    font-weight: 300;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+  }
+}
+
+.contact {
+  position: absolute;
+  overflow: scroll;
+  width: 100%;
+  max-width: 600px;
+  overflow-x: hidden;
+  max-height: 100vh;
+  z-index: 4;
+  // display: none;
+  top: 0;
+  scrollbar-color: #ff3c38 #ffffff00;
+  .back {
+    position: absolute;
+    top:1rem;
+    left: 1rem
+  }
+}
+.contact-container {
+  top:0;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 40;
+  background-color: #ff3b3831;
+  display: grid;
+  // background-color: #ff3b380e;
+  backdrop-filter: blur(4px);
+  place-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff3c38;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0400;
+}
+@media (min-width: 1920px) {
+  .showcase {
+    place-items: center;
+  }
+  .container {
+    min-width: 1900px;
+  }
+  .carousel {
+    max-width: 1700px;
+  }
+  .carousel-container {
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  }
+  .content {
+    padding: 1rem;
+  }
+  .carousel-container {
+    padding: 1rem;
+  }
+  .background-filter {
+    filter: blur(1rem);
+  }
+}

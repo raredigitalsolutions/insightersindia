@@ -1,0 +1,64 @@
+<section class="showcase" [ngClass]="background">
+  <div class="background-filter">
+  </div>
+  <div class="container">
+    <div class="back">
+      <a href="">
+        <div class="link">
+          <img src="assets/arrow-back.svg" alt="">
+          <span>Home</span>
+        </div>
+      </a>
+    </div>
+    <h1>
+      {{data.title}}
+    </h1>
+    <p>{{data.snippet}}</p>
+    <a routerLink="contact" (click)="contactToggle()" class="enquire-link">Enquire</a>
+  </div>
+</section>
+<section class="content">
+  <div *ngFor="let content of data.content ">
+    <p *ngIf="!content['list']">
+      {{content}}
+    </p>
+    <ul *ngIf="content['list']">
+      <li *ngFor="let listItem of content['list']">
+        {{listItem}}
+      </li>
+    </ul>
+  </div>
+  <a routerLink="contact" (click)="contactToggle()" class="enquire-link">Enquire</a>
+</section>
+
+
+<div class="carousel-container">
+  <h2 class="title">
+    Related Courses
+  </h2>
+  <carousel class="carousel" cellWidth="100%" height="430" dots=true [cellsToShow]="cellsToShow" arrowsTheme=dark>
+
+    <div class="carousel-cell" *ngFor="let card of cards">
+      <img src="/assets/courses/{{card.imageSrc}}.jpg" [alt]="card.title">
+      <h2>
+        {{card.title}}
+      </h2>
+      <a [routerLink]="['../', card.link]">Learn More</a>
+
+    </div>
+  </carousel>
+</div>
+
+<div class="contact-container" *ngIf="contact">
+  <div class="contact">
+    <div class="back">
+      <a routerLink="./" (click)="contactToggle()">
+        <div class="link">
+          <img src="assets/arrow-back.svg" alt="">
+          <span>Back</span>
+        </div>
+      </a>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

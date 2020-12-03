@@ -1,6 +1,6 @@
 import { map } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
-import { GalleryItem, ImageItem, Gallery, GalleryConfig,ThumbnailsPosition  } from 'ng-gallery';
+import { GalleryItem, ImageItem, Gallery, GalleryConfig,ThumbnailsPosition, SlidingDirection  } from 'ng-gallery';
 import { Lightbox } from 'ng-gallery/lightbox';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -24,13 +24,15 @@ export class GalleryComponent implements OnInit {
           return {
             thumbPosition: ThumbnailsPosition.Top,
             thumbWidth: 80,
-            thumbHeight: 80
+            thumbHeight: 80,
+            SlidingDirection: SlidingDirection.Horizontal
           };
         }
         return {
           thumbPosition: ThumbnailsPosition.Left,
           thumbWidth: 120,
-          thumbHeight: 90
+          thumbHeight: 90,
+          SlidingDirection: SlidingDirection.Vertical
         };
       })
     );

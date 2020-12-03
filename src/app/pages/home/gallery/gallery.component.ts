@@ -40,7 +40,7 @@ export class GalleryComponent implements OnInit {
   images: GalleryItem[] = [];
   galleryConfig$: Observable<GalleryConfig>;
   ngOnInit(): void {
-    for (let index = 1; index <= 10; index++) {
+    for (let index = 1; index <= 12; index++) {
       let image = new ImageItem({ src: 'assets/gallery/' + index + '.jpg', thumb: 'assets/gallery/' + index + '.jpg' })
       this.images.push(image)
     }

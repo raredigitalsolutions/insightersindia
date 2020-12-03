@@ -1,0 +1,42 @@
+* {
+  line-height: 1.8rem;
+}
+.contact {
+  border-bottom: #ff3c38 2px solid;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.address {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  border: #ff3c38 1px solid;
+  box-shadow: #ff3c3822 0px 0px 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.address:hover {
+  transform: scale(1.02);
+}
+h3,
+fa-icon {
+  color: #ff3c38;
+  font-size: 1.8rem;
+}
+fa-icon {
+  margin-right: 1.2rem;
+  font-size: 1.2rem;
+}
+p {
+  margin: 0;
+}
+.big {
+  font-size: 2rem;
+}

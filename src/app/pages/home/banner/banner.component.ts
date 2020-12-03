@@ -134,7 +134,7 @@ export class BannerComponent implements OnInit {
     gsap.from("#banner" + bannerId, {
       onStart: () => {
         this.tl.pause()
-        console.log('done');
+        // console.log('done');
 
         let banners = document.querySelectorAll('.content');
         let i = 1

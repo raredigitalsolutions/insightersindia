@@ -7,17 +7,29 @@ import { HomeComponent } from './home.component';
 import { BannerComponent } from './banner/banner.component';
 import { MaskComponent } from './mask/mask.component';
 import { TeamComponent } from './team/team.component';
-import { ContactComponent } from './../components/contact/contact.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import {MatGridListModule} from '@angular/material/grid-list'
+import { GalleryModule, GALLERY_CONFIG } from 'ng-gallery';
+import { LightboxModule } from  'ng-gallery/lightbox';
 
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, TestimonialsComponent],
+  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, TestimonialsComponent, GalleryComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    ComponentsModule
-  ]
+    ComponentsModule,
+    MatGridListModule,
+    GalleryModule,
+    LightboxModule
+  ],
+  providers: [ {
+    provide: GALLERY_CONFIG,
+    useValue: {
+      dots: true,
+      imageSize: 'cover'
+    }
+  }]
 })
 export class HomeModule { }

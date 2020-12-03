@@ -1,0 +1,12 @@
+<h2>Gallery</h2>
+<button (click)="open()">
+  <img src="assets/full-screen.svg">
+</button>
+<gallery *ngIf="galleryConfig$ | async; let config"
+[items]="images"
+[thumbWidth]="config.thumbWidth"
+[thumbHeight]="config.thumbHeight"
+[thumbPosition]="config.thumbPosition"
+slidingDirection='vertical'
+playerInterval="5000">
+</gallery>

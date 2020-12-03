@@ -30,7 +30,7 @@ export class ContactComponent implements OnInit {
     name: new FormControl('', [Validators.required, Validators.minLength(4)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('', [Validators.required, Validators.maxLength(10), Validators.minLength(10)]),
-    content: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    content: new FormControl('', [Validators.required, Validators.minLength(3)]),
     city: new FormControl('', [Validators.required, Validators.minLength(4)]),
   });
 

@@ -89,19 +89,24 @@
         <li><a (click)="mobile_menu()" href="#contact">Contact</a></li>
       </ol>
     </nav>
-  <span style="
-    background-color: #ff3c38;
-    padding: 1rem;
-    position: fixed;
-    right: 0;
-    top: 4rem;
-    color: #f3f3f3;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-">
-      <fa-icon [icon]="phone" style="color: #f3f3f3"> </fa-icon> +91 877 895 6884
+    <span style="
+        background-color: #ff3c38;
+        background:linear-gradient(30deg,rgba(255,60,56,1) 0%,  rgb(255, 138, 70) 100%);
+        padding: 1rem;
+        position: fixed;
+        right: 0;
+        top: 4rem;
+        color: #f3f3f3;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+    "
+    (click)="copy('+91 877 895 6884')"
+    >
+      <fa-icon [icon]="phone" style="color: #f3f3f3; margin-right: 1rem;"> </fa-icon> +91 877 895 6884
+      <fa-icon [icon]="paste" style="color: #f3f3f3; margin-left:  1rem; font-size: 1.2rem;"></fa-icon>
     </span>
   </div>
   <div class="left">
@@ -400,8 +405,7 @@
         <h4>
           Hindustan Institute of Technology & Science
         </h4>
-        <img src="../../../assets/partners/hindustan-institute.png"
-          alt="Hindustan Institute of Technology & Science">
+        <img src="../../../assets/partners/hindustan-institute.png" alt="Hindustan Institute of Technology & Science">
         <p>
           Hindustan College of Engineering, started in the year 1985, was conferred the "University Status" by
           University Grants Commission (UGC), Government of India
@@ -411,8 +415,7 @@
         <h4>
           MAG Solvics Private Limited
         </h4>
-        <img src="../../../assets/partners/mag-solvics.png"
-          alt="MAG Solvics Private Limited">
+        <img src="../../../assets/partners/mag-solvics.png" alt="MAG Solvics Private Limited">
         <p>
           MAG was established in 1991 with an insight to design and develop testing instruments for Textile industry
         </p>

@@ -2,6 +2,7 @@ import { Course, CourseCard } from './../../../model/course.model';
 import { courseData } from './../../../data/courses.data';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 
 
@@ -14,7 +15,14 @@ import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 
 export class CourseComponent implements OnInit, AfterViewInit {
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private title: Title,
+    private meta: Meta,
+
+  ) { }
+
   contact: boolean
   data: Course
   background: string
@@ -44,7 +52,10 @@ export class CourseComponent implements OnInit, AfterViewInit {
         if (key != link) { return true }
       })
       this.filterLinks(this.shuffle(this.links))
-
+      this.title.setTitle(this.data.title)
+      this.meta.updateTag({'description':  this.data.snippet})
+      this.meta.updateTag({'og:description':  this.data.snippet})
+      this.meta.updateTag({'twitter:description':  this.data.snippet})
 
     })
 

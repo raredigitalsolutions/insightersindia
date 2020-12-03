@@ -2,6 +2,7 @@ import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { Back, ScrollTrigger } from 'gsap/all';
+import { faCopyright, faCopy } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ import { Back, ScrollTrigger } from 'gsap/all';
 export class HomeComponent implements OnInit {
 
   phone = faPhoneAlt
+  paste = faCopy
   constructor() {
     gsap.registerPlugin(ScrollTrigger)
   }
@@ -123,5 +125,19 @@ export class HomeComponent implements OnInit {
       this.nav_mobile_flag = true
     }
 
+  }
+
+  copy(val: string) {
+    let selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = val;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
   }
 }

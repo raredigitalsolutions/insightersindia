@@ -18,9 +18,6 @@ export class CourseComponent implements OnInit, AfterViewInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private title: Title,
-    private meta: Meta,
-
   ) { }
 
   contact: boolean
@@ -34,6 +31,7 @@ export class CourseComponent implements OnInit, AfterViewInit {
     this.carouselResize()
   }
   ngOnInit(): void {
+
     this.carouselResize()
     let route = this.router.url.split('/').slice(-1).pop()
     if (route == 'contact' && !this.contact) {
@@ -52,11 +50,6 @@ export class CourseComponent implements OnInit, AfterViewInit {
         if (key != link) { return true }
       })
       this.filterLinks(this.shuffle(this.links))
-      this.title.setTitle(this.data.title)
-      this.meta.updateTag({'description':  this.data.snippet})
-      this.meta.updateTag({'og:description':  this.data.snippet})
-      this.meta.updateTag({'twitter:description':  this.data.snippet})
-
     })
 
   }

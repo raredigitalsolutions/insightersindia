@@ -4,6 +4,7 @@ import { ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, Router, RouterOu
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { trigger, transition, group, query, style, animate } from '@angular/animations';
 import { filter, map } from 'rxjs/operators'
+import { Title, Meta } from '@angular/platform-browser';
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
@@ -16,7 +17,12 @@ export class CoursesComponent implements OnInit {
 
   currentDepth: number
   nextDepth: number
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private title: Title,
+    private meta: Meta,
+  ) {
     this.router.events
       .pipe(
         filter(event => event instanceof NavigationEnd),
@@ -30,6 +36,15 @@ export class CoursesComponent implements OnInit {
       )
       .subscribe((route: ActivatedRouteSnapshot) => {
         this.nextDepth = route.data.depth
+        let key = route.data.link
+        let data = courseData[key]
+        this.title.setTitle(data.title)
+        this.meta.updateTag({ name: 'description', content: data.snippet })
+        this.meta.updateTag({ name: 'og:description', content: data.snippet })
+        this.meta.updateTag({ name: 'twitter:description', content: data.snippet })
+
+        // console.log('https://www.insightersindia.in' + this.router.routerState.snapshot.url);
+
       });
   }
   animationParams = {}

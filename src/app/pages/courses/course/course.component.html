@@ -14,10 +14,12 @@
       {{data.title}}
     </h1>
     <p>{{data.snippet}}</p>
-    <a routerLink="contact" (click)="contactToggle()" class="enquire-link">Enquire</a>
+    <!-- <a routerLink="contact" (click)="contactToggle()" class="enquire-link">Enquire</a> -->
+    <!-- <a href="#contact" class="enquire-link">Read More</a> -->
+
   </div>
 </section>
-<section class="content">
+<section class="content" id="content">
   <div *ngFor="let content of data.content ">
     <p *ngIf="!content['list']">
       {{content}}

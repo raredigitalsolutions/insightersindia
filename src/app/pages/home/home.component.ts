@@ -1,3 +1,4 @@
+import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { Back, ScrollTrigger } from 'gsap/all';
@@ -10,6 +11,7 @@ import { Back, ScrollTrigger } from 'gsap/all';
 
 export class HomeComponent implements OnInit {
 
+  phone = faPhoneAlt
   constructor() {
     gsap.registerPlugin(ScrollTrigger)
   }

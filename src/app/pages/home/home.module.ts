@@ -12,6 +12,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import {MatGridListModule} from '@angular/material/grid-list'
 import { GalleryModule, GALLERY_CONFIG } from 'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { LightboxModule } from  'ng-gallery/lightbox';
     ComponentsModule,
     MatGridListModule,
     GalleryModule,
-    LightboxModule
+    LightboxModule,
+    FontAwesomeModule
   ],
   providers: [ {
     provide: GALLERY_CONFIG,

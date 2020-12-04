@@ -1,10 +1,10 @@
+import { MetaService } from './../../services/meta.service';
 import { RouterAnimations } from './../../animation/animation';
 import { courseData } from './../../data/courses.data';
 import { ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, Router, RouterOutlet } from '@angular/router';
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { trigger, transition, group, query, style, animate } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
 import { filter, map } from 'rxjs/operators'
-import { Title, Meta } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
@@ -20,9 +20,15 @@ export class CoursesComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private title: Title,
-    private meta: Meta,
+    private meta: MetaService
   ) {
+
+  }
+  animationParams = {}
+  depth: number
+  metaMutation: boolean = false
+  ngOnInit(): void {
+
     this.router.events
       .pipe(
         filter(event => event instanceof NavigationEnd),
@@ -38,18 +44,38 @@ export class CoursesComponent implements OnInit {
         this.nextDepth = route.data.depth
         let key = route.data.link
         let data = courseData[key]
-        this.title.setTitle(data.title)
-        this.meta.updateTag({ name: 'description', content: data.snippet })
-        this.meta.updateTag({ name: 'og:description', content: data.snippet })
-        this.meta.updateTag({ name: 'twitter:description', content: data.snippet })
+        if (data) {
+          this.meta.generateTags({
+            title: data.title,
+            description: data.snippet,
+          })
+        }
+
 
         // console.log('https://www.insightersindia.in' + this.router.routerState.snapshot.url);
 
       });
-  }
-  animationParams = {}
-  depth: number
-  ngOnInit(): void {
+
+    let key = this.router.url.split('/').slice(-1)[0]
+    let data = courseData[key]
+    if (data) {
+      this.meta.generateTags({
+        title: data.title,
+        description: data.snippet,
+      })
+    } else {
+      let key = this.router.url.split('/').slice(-2)[0]
+      let data = courseData[key]
+      this.meta.generateTags({
+        title: data.title,
+        description: data.snippet,
+      })
+    }
+
+    console.log('akma');
+
+
+
   }
   getDepth(outlet) {
     return outlet.activatedRouteData['depth'];

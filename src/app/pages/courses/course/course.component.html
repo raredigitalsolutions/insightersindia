@@ -45,12 +45,20 @@
       <h2>
         {{card.title}}
       </h2>
-      <a [routerLink]="['../', card.link]">Learn More</a>
+      <a [routerLink]="['../', card.link]" class="cta">Learn More</a>
 
     </div>
   </carousel>
 </div>
-
+<h2 class="promotion-title title">Upcoming Courses</h2>
+<div class="promotion">
+  <a href="courses/NLP-Training/contact" class="cta">Contact</a>
+ <iframe
+   src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Finsightersindia%2Fposts%2F147012280512625&show_text=false&width=552&height=495&appId"
+   width="552" height="495" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
+   allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+ </iframe>
+</div>
 <div class="contact-container" *ngIf="contact">
   <div class="contact">
     <div class="back">

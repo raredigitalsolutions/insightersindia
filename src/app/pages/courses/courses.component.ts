@@ -49,6 +49,7 @@ export class CoursesComponent implements OnInit {
             title: data.title,
             description: data.snippet,
           })
+          this.meta.createCanonicalURL(`courses/${key}`)
         }
 
 
@@ -63,6 +64,7 @@ export class CoursesComponent implements OnInit {
         title: data.title,
         description: data.snippet,
       })
+      this.meta.createCanonicalURL(`courses/${key}`)
     } else {
       let key = this.router.url.split('/').slice(-2)[0]
       let data = courseData[key]
@@ -70,6 +72,7 @@ export class CoursesComponent implements OnInit {
         title: data.title,
         description: data.snippet,
       })
+      this.meta.createCanonicalURL(`courses/${key}`)
     }
 
     console.log('akma');

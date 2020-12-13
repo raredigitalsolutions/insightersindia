@@ -1,12 +1,21 @@
 import { Meta, Title } from '@angular/platform-browser';
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MetaService {
 
-  constructor(private meta: Meta, private title: Title) { }
+  constructor
+    (
+      private meta: Meta,
+      private title: Title,
+      @Inject(DOCUMENT) private dom
+    ) { }
+
+
+  link: HTMLLinkElement
 
   generateTags(config) {
     // default values
@@ -38,5 +47,15 @@ export class MetaService {
     this.meta.updateTag({ itemprop: 'description', content: config.description });
     this.meta.updateTag({ itemprop: 'image', content: config.image });
     this.title.setTitle(config.title)
+  }
+
+  createCanonicalURL(url: string = this.dom.URL) {
+    if (this.link === undefined) {
+      this.link = this.dom.createElement('link');
+      this.link.setAttribute('rel', 'canonical');
+      this.dom.head.appendChild(this.link);
+    }
+    this.link.setAttribute('href', url);
+
   }
 }

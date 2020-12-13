@@ -7,7 +7,11 @@ export const courseData = {
       'EI is measured through Emotional Quotient (EQ). When it comes to success and happiness in life EQ matters more than Intelligence Quotient (IQ). It is a common observation that the smartest and most intelligent people are not the most successful in life.',
       ' There is no doubt that IQ has its role in taking a person to higher positions in life, But, it is the EQ that will help one to navigate the social complexities of the work place and excel in one’s career. If a person fails to manage his emotions well, he will not be managing his stress either and the result will be leading an unhappy, miserable life with a poor immune system, resulting in poor physical and mental wellbeing.',
       'The training session on Emotional Intelligence will impart in the participants, four key skills, viz., self-management, self-awareness, social awareness and relationship management. This will transform a person to lead a meaningful, stress-free life achieving career and personal goals with ease. An emotionally intelligent person will radiate positive energy and will be highly sought-after by the people around. Such a person will, for sure, be an asset for any organization.',
-    ]
+    ],
+    meta: {
+      title: 'Emotional Intelligence',
+      description: 'Man is made up of physical body, thoughts and emotions. Emotions are at a deeper level than thoughts. Man does not live so much according to his thoughts, but lives more according to his emotions. So, for transformation in life to take place, it is not enough if thoughts alone change; emotions should also change. At its core, Emotional Intelligence is the ability to understand and manage one’s own emotions in order to communicate effectively, overcome challenges, relieve stress, resolve conflicts, and foster group harmony and teamwork…...'
+    },
   },
   'Law-Of-Attraction': {
     title: 'Law Of Attraction',
@@ -17,7 +21,11 @@ export const courseData = {
       'Learning how to use the law consciously to enhance your life is an intricate skill. It takes time to master the skill. But, it is not difficult. Since this is a universal law, it works. The fundamental law that governs the universe is the Law of Vibrations, according to which everything in the universe starting from the planets floating in the space to the tiny grains of sand on the earth are all in a state of vibration. This is the hard reality. From this reality emerges the fact that ‘Like attracts like’ which is the rule governing the Law of Attraction.',
       'Hence, understanding how the law works makes all the difference. Once a person gets a grasp of this, the law will definitely work for him. Life is simply magical, not logical. Because, the subtle ways through which life exists defies all logics.',
       'The training session on the Law of Attraction will expose the participants to the magical ways through which life sustains on the earth. For a person who understands this, the Law of Attraction will simply work. For others, it will only be a distant mirage.'
-    ]
+    ],
+    meta: {
+      title: 'Law Of Attraction',
+      description: 'We all agree with the Law of Gravity. Though we do not know how it works, we know that it exists. The ‘why’ of the Law of gravity is complicated to understand, even for the best scientific mind. The Law of Gravity works; The Law of Attraction (LOA) also works. LOA is not a complicated magic. It is a simple and unchanging universal principle. LOA is a philosophy which suggests that positive thoughts bring positive results into a person’s life while negative thoughts bring negative outcomes.'
+    },
   },
   'Motivational-Training': {
     title: 'Motivational Programme',
@@ -47,7 +55,11 @@ export const courseData = {
       'If you have taken a decision to learn NLP, you have made the right choice. It is better late than never.',
       'The positive thinker sees the invisible, feels the intangible and achieves the impossible.',
       'Understanding NLP will transform you into a positive thinker. Then, sky is the limit for your growth, be it on your personal front or in your business/career.'
-    ]
+    ],
+    meta: {
+      title: 'NLP Training, Neuro Linguistic Program, NLP Coaching Bangalore, NLP Certification, NLP Hyderabad, NLP Chennai, NLP Kerala, NLP Delhi',
+      description: 'Best NLP Practitioner Certification Course Online by Insighters India. We offer online NLP Training. NLP Training and Coaching Organization providing best in class Neuro Linguistic Programs. Experience of training 10,000 students and senior executives across various organizations in India.'
+    },
   },
   'OD-Intervention': {
     title: 'OD Intervention',
@@ -56,7 +68,11 @@ export const courseData = {
       'OD interventions are carefully designed activities to help a team, department or an organization to achieve a goal or solve a problem. Hence, these interventions are organization specific. It requires extensive and critical studies to arrive at the right intervention suited for a given situation. The starting point is to get a clear view of the objectives to be achieved, problems to be solved etc., which will be followed by identifying the right intervention methods.',
       'Depending upon the status of an organization the intervention methods may take the form of Team Building, Out-of-the box thinking to spot hidden avenues, Strategic Planning, Communicating the vision of the organization to all the organizational members and getting a buy-in, changing the organizational culture, improving the energy level, organizational redesign, job enrichment, management by objectives, sensitivity training etc. The key benefits of OD interventions include continuous improvement, employee development, improved communication and product & service enhancement which in turn leads to increased profit.',
       '‘Insighters India’, with its expert team members who have extensive hands-on experience in different types of organizations is well placed in bringing about the required change in organizations through OD interventions'
-    ]
+    ],
+    meta: {
+      title: 'OD Intervention',
+      description: 'Simply put, Organizational Development (OD) is a technique of planned change. It seeks to change the entire culture of the organization so that the organization may better respond and adapt to industry/market changes and technological advances. OD is a comprehensive strategy for organization improvement. It is a long range effort and touches upon various problem-areas and brings about improvement through a collaborative management culture. In short, OD is like a Master Health Check-up for an organization. OD interventions are the building blocks of OD which are planned activities that are meant to bring about the change.'
+    },
   },
   'Stress-Management': {
     title: 'Stress Management',
@@ -64,14 +80,22 @@ export const courseData = {
     content: [
       'Stress Management is more of a mind stuff. To know as to how stress arises in a person, on should dig deep down to identify its roots. Stress is all due to underlying fear. The fear may be due to anything that affects a person, maybe fear of losing job, fear of not being able to meet the targets, fear of intimidating boss, fear of inability to make a comfortable living, fear of interpersonal conflicts and their consequences etc., On the personal front, fear may be due to threatening family problems like divorce, ill-health of dependent family members etc., If we dissect any possible cause for stress, underneath it we will find the fear of death, which lies as the fundamental cause for all other forms of fear. Fear of death is fear of time and fear of time is deeply the fear of unlived moments, unlived life.  The solution to be free from fear (and hence free from stress) is simple. The solution lies in living life more intensely, more meaningfully.',
       'The essence of the Bahagavad Gita, viz., ‘Do you duty unmindful of the results’ can make one stress-free. But to achieve that state, one has to undergo a total transformation which can be aided and accelerated through Stress Management training programmes. The Stress Management programme designed and offered by ‘Insighters India’ is not a run-of-the-mill programme. It is designed in such a way that it transforms one’s outlook towards life and makes a person stress-proof',
-    ]
+    ],
+    meta: {
+      title: 'Stress Management Training | Stress Management Courses I Stress Management Online I Lower Stress &  Anxiety',
+      description: 'Learn Stress Management & Break stress on your life I Reduce stress, negativity, and anxiety I Lead a happier, healthier, and more productive Life I Practical stress management training course covering techniques for managing workplace stress'
+    },
   },
   'Time-Management': {
     title: 'Time Management',
     snippet: 'All of us are given a time span of 24 hours a day- nothing less, nothing more. Still we find that some people achieve higher levels of productivity, reap greater success in all their endeavours and have enough time left to enjoy lighter moments in life - in the same amount of time as everyone else is having. These people have something different in them, they possess certain skills and they practise certain techniques, knowingly or unknowingly which make them stand apart from others who are hard-pressed for time. Time Management skills can be learned once a person undergoes a systematically designed training programme.',
     content: [
       'Delayed projects, slipped deadlines, a long ‘to-do list’ that seems obviously impossible to complete etc., are some of the signs pointing towards improper management of time. These symptoms are frequently come across in organizations where time management techniques are not practised. Time is money and wastage of time is wastage of money, which an organization is not afford to ignore. There are many Time management techniques – Setting SMART goals, Effective planning, Proper delegation, avoiding distraction, beating procrastination, setting priorities etc. are some of the techniques that will help manage the available time effectively and efficiently. When a manager knows how to manage his time properly, it will relieve his subordinates from work pressure; when a subordinate manages his time properly, it will relieve he work pressure from those who work under him in the hierarchy. In the absence of the so-called work pressure, every employee will perform to their peak performance level, which will only support the achievement of the organizational objectives. The biggest advantage of proper time management is improvement in productivity without making the employees stretch themselves too far. Thus, practising proper time management techniques by all the employees in an organization will make transform the organization into a better place to work with.',
-    ]
+    ],
+    meta: {
+      title: 'Online Time Management Classes | Start Learning Time Management I Time Management Tutorial - Courses on Time Management Skills',
+      description: 'Learn Time Management I Learn Time  management skills, tools and techniques and  become more productive I How to get the most from your day using prioritization, scheduling, goal setting I Master time management skills.'
+    },
   },
 
 }

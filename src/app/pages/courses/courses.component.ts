@@ -46,8 +46,8 @@ export class CoursesComponent implements OnInit {
         let data = courseData[key]
         if (data) {
           this.meta.generateTags({
-            title: data.title,
-            description: data.snippet,
+            title: data.meta.title,
+            description: data.meta.description,
           })
           this.meta.createCanonicalURL(`courses/${key}`)
         }
@@ -61,21 +61,21 @@ export class CoursesComponent implements OnInit {
     let data = courseData[key]
     if (data) {
       this.meta.generateTags({
-        title: data.title,
-        description: data.snippet,
+        title: data.meta.title,
+        description: data.meta.description,
       })
       this.meta.createCanonicalURL(`courses/${key}`)
     } else {
       let key = this.router.url.split('/').slice(-2)[0]
       let data = courseData[key]
       this.meta.generateTags({
-        title: data.title,
-        description: data.snippet,
+        title: data.meta.title,
+        description: data.meta.description,
       })
       this.meta.createCanonicalURL(`courses/${key}`)
     }
 
-    console.log('akma');
+    // console.log('akma');
 
 
 

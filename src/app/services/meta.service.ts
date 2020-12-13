@@ -27,6 +27,8 @@ export class MetaService {
       ...config
     }
 
+    this.meta.updateTag({ name: 'description', content: config.description });
+
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.meta.updateTag({ name: 'twitter:site', content: '@insightersindia' });
     this.meta.updateTag({ name: 'twitter:title', content: config.title });
@@ -38,7 +40,7 @@ export class MetaService {
     this.meta.updateTag({ property: 'og:title', content: config.title });
     this.meta.updateTag({ property: 'og:description', content: config.description });
     this.meta.updateTag({ property: 'og:image', content: config.image });
-    this.meta.updateTag({ property: 'og:url', content: `https://insighters-india.web.app/${config.slug}` });
+    this.meta.updateTag({ property: 'og:url', content: `https://insightersindia.in/${config.slug}` });
 
     this.meta.removeTag('itemprop');
     this.meta.removeTag('itemprop');

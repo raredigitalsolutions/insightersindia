@@ -13,6 +13,7 @@ export class ContactComponent implements OnInit {
   constructor(private fire_service: FirebaseService, private route: ActivatedRoute ) { }
 
   @Input('subject') subject: string = 'Insighters India'
+  @Input('heading') heading: string = 'Register'
   disabled = false
   phone_valid = false
   drop_valid = false

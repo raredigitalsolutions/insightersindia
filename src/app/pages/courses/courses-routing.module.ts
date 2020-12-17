@@ -32,7 +32,7 @@ const routes: Routes = [
       },
       {
         path: 'Stress-Management', component: CourseComponent, data: { link: 'Stress-Management', depth: 6 },
-        children: [{ path: 'contact', component: ContactComponent, data: { subject: 'Stress-Management' } }]
+        children: [{ path: 'contact', component: ContactComponent, data: { subject: 'Stress Management' } }]
       },
       {
         path: 'Time-Management', component: CourseComponent, data: { link: 'Time-Management', depth: 7 },

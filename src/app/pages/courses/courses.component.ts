@@ -44,12 +44,11 @@ export class CoursesComponent implements OnInit {
         this.nextDepth = route.data.depth
         let key = route.data.link
         let data = courseData[key]
+        console.log(key);
+
         if (data) {
-          this.meta.generateTags({
-            title: data.meta.title,
-            description: data.meta.description,
-          })
-          this.meta.createCanonicalURL(`courses/${key}`)
+          this.genrateMeta(data, key)
+          this.meta.createCanonicalURL(`https://www.insightersindia.in/courses/${key}`)
         }
 
 
@@ -60,19 +59,13 @@ export class CoursesComponent implements OnInit {
     let key = this.router.url.split('/').slice(-1)[0]
     let data = courseData[key]
     if (data) {
-      this.meta.generateTags({
-        title: data.meta.title,
-        description: data.meta.description,
-      })
-      this.meta.createCanonicalURL(`courses/${key}`)
+      this.genrateMeta(data, key)
+      this.meta.createCanonicalURL(`https://www.insightersindia.in/courses/${key}`)
     } else {
       let key = this.router.url.split('/').slice(-2)[0]
       let data = courseData[key]
-      this.meta.generateTags({
-        title: data.meta.title,
-        description: data.meta.description,
-      })
-      this.meta.createCanonicalURL(`courses/${key}`)
+      this.genrateMeta(data, key)
+      this.meta.createCanonicalURL(`https://www.insightersindia.in/courses/${key}`)
     }
 
     // console.log('akma');
@@ -82,5 +75,21 @@ export class CoursesComponent implements OnInit {
   }
   getDepth(outlet) {
     return outlet.activatedRouteData['depth'];
+  }
+
+  genrateMeta(data, key){
+    if (data.meta) {
+      this.meta.generateTags({
+        title: data.meta.title,
+        description: data.meta.description,
+        slug: key
+      })
+    } else  {
+      this.meta.generateTags({
+        title: data.title,
+        description: data.snippet,
+        slug: key
+      })
+    }
   }
 }

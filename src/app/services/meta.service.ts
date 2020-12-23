@@ -15,14 +15,14 @@ export class MetaService {
     ) { }
 
 
-  link: HTMLLinkElement
+  link: HTMLLinkElement = document.querySelector("link[rel='canonical']")
 
   generateTags(config) {
     // default values
     config = {
       title: 'Insighters India',
       description: 'We, Insighters India are specialized in training and empowering human resources to achieve organizational excellence in tune with our motto “Transform and Perform”.',
-      image: 'https://insighters-india.web.app/assets/logo/logo.svg',
+      image: 'https://www.insightersindia.in/assets/logo/logo.svg',
       slug: '',
       ...config
     }
@@ -40,7 +40,7 @@ export class MetaService {
     this.meta.updateTag({ property: 'og:title', content: config.title });
     this.meta.updateTag({ property: 'og:description', content: config.description });
     this.meta.updateTag({ property: 'og:image', content: config.image });
-    this.meta.updateTag({ property: 'og:url', content: `https://insightersindia.in/${config.slug}` });
+    this.meta.updateTag({ property: 'og:url', content: `https://www.insightersindia.in/${config.slug}` });
 
     this.meta.removeTag('itemprop');
     this.meta.removeTag('itemprop');

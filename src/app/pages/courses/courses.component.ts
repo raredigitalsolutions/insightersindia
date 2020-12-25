@@ -44,7 +44,6 @@ export class CoursesComponent implements OnInit {
         this.nextDepth = route.data.depth
         let key = route.data.link
         let data = courseData[key]
-        console.log(key);
 
         if (data) {
           this.genrateMeta(data, key)

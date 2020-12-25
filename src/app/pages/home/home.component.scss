@@ -56,17 +56,18 @@
     height: clamp(350px, 70vh, 500px);
     transition: all 0.3s ease-in-out;
     border-radius: 3em;
+    overflow: hidden;
     .transform {
       border-radius: 1em;
       width: 40vw;
       transition: all 0.2s ease-in-out;
-
+      object-fit: cover;
       background-color: rgb(255, 255, 250);
       height: 100%;
-      background-image: url("../../../assets/images/positive.jpg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+      // background-image: url("../../../assets/images/positive.jpg");
+      // background-position: center;
+      // background-size: cover;
+      // background-repeat: no-repeat;
       box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0.4em;
     }
   }

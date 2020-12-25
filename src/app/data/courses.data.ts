@@ -9,8 +9,8 @@ export const courseData = {
       'The training session on Emotional Intelligence will impart in the participants, four key skills, viz., self-management, self-awareness, social awareness and relationship management. This will transform a person to lead a meaningful, stress-free life achieving career and personal goals with ease. An emotionally intelligent person will radiate positive energy and will be highly sought-after by the people around. Such a person will, for sure, be an asset for any organization.',
     ],
     meta: {
-      title: 'Emotional Intelligence',
-      description: 'Man is made up of physical body, thoughts and emotions. Emotions are at a deeper level than thoughts. Man does not live so much according to his thoughts, but lives more according to his emotions. So, for transformation in life to take place, it is not enough if thoughts alone change; emotions should also change. At its core, Emotional Intelligence is the ability to understand and manage one’s own emotions in order to communicate effectively, overcome challenges, relieve stress, resolve conflicts, and foster group harmony and teamwork…...'
+      title: 'Emotional Intelligence | Professional  Courses -  Insighters India',
+      description: 'Emotional Intelligence is the ability to understand and manage one’s own emotions in order to communicate effectively, overcome challenges, relieve stress, resolve conflicts, and foster group harmony and teamwork.'
     },
   },
   'Law-Of-Attraction': {
@@ -23,8 +23,8 @@ export const courseData = {
       'The training session on the Law of Attraction will expose the participants to the magical ways through which life sustains on the earth. For a person who understands this, the Law of Attraction will simply work. For others, it will only be a distant mirage.'
     ],
     meta: {
-      title: 'Law Of Attraction',
-      description: 'We all agree with the Law of Gravity. Though we do not know how it works, we know that it exists. The ‘why’ of the Law of gravity is complicated to understand, even for the best scientific mind. The Law of Gravity works; The Law of Attraction (LOA) also works. LOA is not a complicated magic. It is a simple and unchanging universal principle. LOA is a philosophy which suggests that positive thoughts bring positive results into a person’s life while negative thoughts bring negative outcomes.'
+      title: 'Law of Attraction Courses - Insighters India',
+      description: 'Law of attraction is a philosophy which suggests that positive thoughts bring positive results into a person’s life while negative thoughts bring negative outcomes.'
     },
   },
   'Motivational-Training': {
@@ -32,7 +32,11 @@ export const courseData = {
     snippet: 'An organization deploys different kinds of assets for its functioning. If we want to prioritize the assets owned by an organization in terms of their importance, many things may come to our mind – Research & Development, Marketing, Intellectual Property Rights, Sophisticated technology owned by the organization and the like. But, the fact remains hidden. Though, these are no doubt valuable assets for an organization, the one that stands out and most valuable is the ‘Human Resource’ of the organization. This is the supporting force that lies behind all other forms of assets. Hence, the success of an organization will be guaranteed if its human resources remain committed and motivated.',
     content: [
       'People matter most for any organization. It is the human resource that differentiates an organization from its competitors. The success or failure of an organization is in the hands of the employees. An organization will succeed if its employees give their 100%. Employees are the face of an organization and they are the first customer. But, the human resource will act as an invaluable asset only if the employees remain motivated and contribute their maximum towards achievement of the organizational objectives. Employees, as human beings will have their own priorities in life. Every employee is different in many aspects. Orienting their mind-set towards the organization is a very big challenge. Here lies the relevance of Motivational training programmes. The programme should first transform the employees in such a way that they understand the importance of their contribution to the organization. The Motivational training programme does this difficult but possible job of transforming the employees. A transformed employee will remain committed and motivated and will perform to his /her capacity. Such an employee will become an indispensable asset. ‘Insighters India’, with its motto of ‘Transform and Perform’ is capable of transforming every employee, making them remain motivated and contribute their best. The time, effort and money spent on this programme will remain more than compensated by the benefits that will follow.'
-    ]
+    ],
+    meta: {
+      title: 'Motivational Skill Training Courses - Insighters India',
+      description: 'Our Motivational training programme does this difficult, but possible job of transforming the employees. A transformed employee will remain committed and motivated and will perform to his /her capacity.'
+    }
   },
   'NLP-Training': {
     title: 'Learning Neuro Linguistic Programming (NLP)',
@@ -57,8 +61,8 @@ export const courseData = {
       'Understanding NLP will transform you into a positive thinker. Then, sky is the limit for your growth, be it on your personal front or in your business/career.'
     ],
     meta: {
-      title: 'NLP Training, Neuro Linguistic Program, NLP Coaching Bangalore, NLP Certification, NLP Hyderabad, NLP Chennai, NLP Kerala, NLP Delhi',
-      description: 'Best NLP Practitioner Certification Course Online by Insighters India. We offer online NLP Training. NLP Training and Coaching Organization providing best in class Neuro Linguistic Programs. Experience of training 10,000 students and senior executives across various organizations in India.'
+      title: 'Nlp Training | Nlp Cerfication | Neuro Linguistic Programming - Insighters India',
+      description: 'Learning Neuro Linguistic Programming (NLP) is all about learning the language of your mind. It helps a way of bringing out the best in yourself and in others.'
     },
   },
   'OD-Intervention': {
@@ -70,8 +74,8 @@ export const courseData = {
       '‘Insighters India’, with its expert team members who have extensive hands-on experience in different types of organizations is well placed in bringing about the required change in organizations through OD interventions'
     ],
     meta: {
-      title: 'OD Intervention',
-      description: 'Simply put, Organizational Development (OD) is a technique of planned change. It seeks to change the entire culture of the organization so that the organization may better respond and adapt to industry/market changes and technological advances. OD is a comprehensive strategy for organization improvement. It is a long range effort and touches upon various problem-areas and brings about improvement through a collaborative management culture. In short, OD is like a Master Health Check-up for an organization. OD interventions are the building blocks of OD which are planned activities that are meant to bring about the change.'
+      title: 'OD Intervention Courses - Insighters India',
+      description: 'Organizational Development (OD) is a technique of planned change. It seeks to change the entire culture of the organization so that the organization may better respond and adapt to industry/market changes and technological advances.'
     },
   },
   'Stress-Management': {
@@ -82,7 +86,7 @@ export const courseData = {
       'The essence of the Bahagavad Gita, viz., ‘Do you duty unmindful of the results’ can make one stress-free. But to achieve that state, one has to undergo a total transformation which can be aided and accelerated through Stress Management training programmes. The Stress Management programme designed and offered by ‘Insighters India’ is not a run-of-the-mill programme. It is designed in such a way that it transforms one’s outlook towards life and makes a person stress-proof',
     ],
     meta: {
-      title: 'Stress Management Training | Stress Management Courses I Stress Management Online I Lower Stress &  Anxiety',
+      title: 'Stress Management Courses - Insighters India',
       description: 'Learn Stress Management & Break stress on your life I Reduce stress, negativity, and anxiety I Lead a happier, healthier, and more productive Life I Practical stress management training course covering techniques for managing workplace stress'
     },
   },
@@ -93,8 +97,8 @@ export const courseData = {
       'Delayed projects, slipped deadlines, a long ‘to-do list’ that seems obviously impossible to complete etc., are some of the signs pointing towards improper management of time. These symptoms are frequently come across in organizations where time management techniques are not practised. Time is money and wastage of time is wastage of money, which an organization is not afford to ignore. There are many Time management techniques – Setting SMART goals, Effective planning, Proper delegation, avoiding distraction, beating procrastination, setting priorities etc. are some of the techniques that will help manage the available time effectively and efficiently. When a manager knows how to manage his time properly, it will relieve his subordinates from work pressure; when a subordinate manages his time properly, it will relieve he work pressure from those who work under him in the hierarchy. In the absence of the so-called work pressure, every employee will perform to their peak performance level, which will only support the achievement of the organizational objectives. The biggest advantage of proper time management is improvement in productivity without making the employees stretch themselves too far. Thus, practising proper time management techniques by all the employees in an organization will make transform the organization into a better place to work with.',
     ],
     meta: {
-      title: 'Online Time Management Classes | Start Learning Time Management I Time Management Tutorial - Courses on Time Management Skills',
-      description: 'Learn Time Management I Learn Time  management skills, tools and techniques and  become more productive I How to get the most from your day using prioritization, scheduling, goal setting I Master time management skills.'
+      title: 'Time Management Courses - Insighters India',
+      description: 'Time management is really important of every working professionals. This skill can be learned once a person undergoes a systematically designed training programme.'
     },
   },
 

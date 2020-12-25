@@ -73,7 +73,8 @@ export class CourseComponent implements OnInit, AfterViewInit {
       let card = {
         title: courseData[link].title,
         link: link,
-        imageSrc: link.toLowerCase()
+        imageSrc: link.toLowerCase(),
+        alt: courseData[link].meta.title
       }
       this.cards.push(card)
     });

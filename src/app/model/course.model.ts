@@ -10,4 +10,5 @@ export class CourseCard {
   title: string
   link: string
   imageSrc: string
+  alt: string
 }

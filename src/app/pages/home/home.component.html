@@ -55,6 +55,8 @@
         <li><a href="#team">Team</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a (click)="mobile_menu()" href="tel:8778956884"><fa-icon [icon]="phone" style="color: #272727; margin-right: 1rem;"> </fa-icon></a></li>
+        <li><a href="mailto:infoinsighter@gmail.com"><fa-icon [icon]="mail" style="color: #272727; margin-right: 1rem;"> </fa-icon></a></li>
       </ol>
     </nav>
     <svg class="nav-mobile-svg" (click)="mobile_menu()" id="Layer_1" data-name="Layer 1"
@@ -87,27 +89,12 @@
         <li><a (click)="mobile_menu()" href="#team">Team</a></li>
         <li><a (click)="mobile_menu()" href="#gallery">Gallery</a></li>
         <li><a (click)="mobile_menu()" href="#contact">Contact</a></li>
+        <li><a (click)="mobile_menu()" href="tel:8778956884"><fa-icon [icon]="phone" style="color: #fff; margin-right: 1rem;"> </fa-icon></a></li>
+        <li><a (click)="mobile_menu()" href="mailto:infoinsighter@gmail.com"><fa-icon [icon]="mail" style="color: #fff; margin-right: 1rem;"> </fa-icon></a></li>
       </ol>
     </nav>
-    <span style="
-        background-color: #ff3c38;
-        background:linear-gradient(30deg,rgba(255,60,56,1) 0%,  rgb(255, 138, 70) 100%);
-        padding: 1rem;
-        position: fixed;
-        right: 0;
-        top: 4rem;
-        color: #f3f3f3;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-        font-weight: 600;
-        font-size: 1.1rem;
-        cursor: pointer;
-    "
-    (click)="copy('+91 877 895 6884')"
-    >
-      <fa-icon [icon]="phone" style="color: #f3f3f3; margin-right: 1rem;"> </fa-icon> +91 877 895 6884
-      <fa-icon [icon]="paste" style="color: #f3f3f3; margin-left:  1rem; font-size: 1.2rem;"></fa-icon>
-    </span>
+
+
   </div>
   <div class="left">
     <app-banner></app-banner>

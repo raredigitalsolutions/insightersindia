@@ -10,27 +10,34 @@
         </div>
       </a>
     </div>
-    <h1>
-      {{data.title}}
-    </h1>
-    <p>{{data.snippet}}</p>
+    <article>
+      <h1>
+        {{data.title}}
+      </h1>
+      <p>{{data.snippet}}</p>
+    </article>
+
     <!-- <a routerLink="contact" (click)="contactToggle()" class="enquire-link">Enquire</a> -->
     <!-- <a href="#contact" class="enquire-link">Read More</a> -->
 
   </div>
 </section>
 <section class="content" id="content">
-  <div *ngFor="let content of data.content ">
-    <p *ngIf="!content['list']">
-      {{content}}
-    </p>
-    <ul *ngIf="content['list']">
-      <li *ngFor="let listItem of content['list']">
-        {{listItem}}
-      </li>
-    </ul>
-  </div>
-  <a routerLink="contact" (click)="contactToggle()" class="enquire-link">Register</a>
+  <article>
+
+    <div *ngFor="let content of data.content ">
+      <p *ngIf="!content['list']">
+        {{content}}
+      </p>
+      <ul *ngIf="content['list']">
+        <li *ngFor="let listItem of content['list']">
+          {{listItem}}
+        </li>
+      </ul>
+    </div>
+    <a routerLink="contact" (click)="contactToggle()" class="enquire-link">Register</a>
+  </article>
+
 </section>
 
 

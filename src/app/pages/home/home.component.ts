@@ -1,4 +1,4 @@
-import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { Back, ScrollTrigger } from 'gsap/all';
@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
 
   phone = faPhoneAlt
   paste = faCopy
+  mail = faEnvelope
   constructor() {
     gsap.registerPlugin(ScrollTrigger)
   }

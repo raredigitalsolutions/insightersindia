@@ -6,8 +6,9 @@
   margin-top: 2rem;
   padding-top: 2rem;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .address {
@@ -29,6 +30,7 @@ h3,
 fa-icon {
   color: #ff3c38;
   font-size: 1.8rem;
+  margin-top: 1rem;
 }
 fa-icon {
   margin-right: 1.2rem;

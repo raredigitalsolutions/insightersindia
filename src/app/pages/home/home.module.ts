@@ -14,10 +14,11 @@ import { GalleryModule, GALLERY_CONFIG } from 'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IsoComponent } from './iso/iso.component';
+import { MissionComponent } from './mission/mission.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, TestimonialsComponent, GalleryComponent, IsoComponent],
+  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, TestimonialsComponent, GalleryComponent, IsoComponent, MissionComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

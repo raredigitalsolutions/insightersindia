@@ -13,10 +13,11 @@ import {MatGridListModule} from '@angular/material/grid-list'
 import { GalleryModule, GALLERY_CONFIG } from 'ng-gallery';
 import { LightboxModule } from  'ng-gallery/lightbox';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { IsoComponent } from './iso/iso.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, TestimonialsComponent, GalleryComponent],
+  declarations: [HomeComponent, BannerComponent, MaskComponent, TeamComponent, TestimonialsComponent, GalleryComponent, IsoComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

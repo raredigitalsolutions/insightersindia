@@ -1,0 +1,20 @@
+#container {
+  padding: 3rem;
+  display: grid;
+  place-items: center;
+  #title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h2 {
+      font-size: xx-large;
+    }
+  }
+  #cert {
+    margin-top: 6rem;
+    max-height: 70vh;
+    max-width: 70vw;
+  }
+}

@@ -38,6 +38,10 @@ const routes: Routes = [
         path: 'Time-Management', component: CourseComponent, data: { link: 'Time-Management', depth: 7 },
         children: [{ path: 'contact', component: ContactComponent, data: { subject: 'Time Management' } }]
       },
+      {
+        path: 'Leadership-Development', component: CourseComponent, data: { link: 'Leadership-Development', depth: 7 },
+        children: [{ path: 'contact', component: ContactComponent, data: { subject: 'Leadership Development' } }]
+      },
     ]
   },
   {

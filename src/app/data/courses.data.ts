@@ -101,5 +101,17 @@ export const courseData = {
       description: 'Time management is really important of every working professionals. This skill can be learned once a person undergoes a systematically designed training programme.'
     },
   },
+  'Leadership-Development': {
+    title: 'Leadership Development',
+    snippet: '',
+    content: [
+    ],
+    meta: {
+      title: 'Leadership Development - Insighters India',
+      description: 'Leadership Development - Insighters India'
+    },
+  },
+
+
 
 }

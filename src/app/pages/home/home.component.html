@@ -323,88 +323,18 @@
   <div class="container">
     <div class="text">
       <h2>
-        Our Partners
+        Our Clients
       </h2>
     </div>
     <div class="cards">
-      <div class="card">
-        <h4>
-          The Chennai Silks
-        </h4>
-        <img src="../../../assets/partners/chennai_silks.png" alt=" The Chennai Silks">
-        <p>
-          The Chennai Silks is chain of retail textile shops in South India.
-        </p>
-      </div>
 
-      <div class="card">
+      <div class="card" *ngFor="let client of clients">
         <h4>
-          Kirtilals
+          {{client.title}}
         </h4>
-        <img src="../../../assets/partners/kirtilals.png" alt=" The Chennai Silks">
+        <img [src]="'../../../assets/partners/'+client.img" alt=" The Chennai Silks">
         <p>
-          Kirtilals is a diamond jewellery retailer with a large presence in South Indian cities.
-        </p>
-      </div>
-
-      <div class="card">
-        <h4>
-          V-Guard
-        </h4>
-        <img src="../../../assets/partners/vguard.png" alt=" The Chennai Silks">
-        <p>
-          V-Guard Industries Ltd is a major electrical appliances manufacturer in India, and the largest in the state of
-          Kerala with an annual turnover of ₹23.21 billion
-        </p>
-      </div>
-      <div class="card">
-        <h4>
-          MAS Solar Systems Private Limited
-        </h4>
-        <img src="../../../assets/partners/mas_solar_systems.png" alt=" The Chennai Silks">
-        <p>
-          Established in the year 2010, Mas Solar Systems Private Limited started the endeavor to resource the nature’s
-          power, solar energy with the development of solar-based products for domestic and commercial applications.
-        </p>
-      </div>
-      <div class="card">
-        <h4>
-          Amphisoft Technologies
-        </h4>
-        <img src="../../../assets/partners/amphisoft.png" alt=" The Chennai Silks">
-        <p>
-          Amphisoft Technologies is a next-generation global technology company that helps enterprises reimagine their
-          businesses for the digital age.
-        </p>
-      </div>
-      <div class="card">
-        <h4>
-          Sakthi Institute of Information and Management
-        </h4>
-        <img src="../../../assets/partners/sri-shakthi-institute.png"
-          alt="Sakthi Institute of Information and Management">
-        <p>
-          Sakthi Institute of information and Management Studies (SIIMS), was founded by Padmabhusan Arutchelvar Dr. N.
-          Mahalingam, founder of SIIMS in 1947.
-        </p>
-      </div>
-      <div class="card">
-        <h4>
-          Hindustan Institute of Technology & Science
-        </h4>
-        <img src="../../../assets/partners/hindustan-institute.png" alt="Hindustan Institute of Technology & Science">
-        <p>
-          Hindustan College of Engineering, started in the year 1985, was conferred the "University Status" by
-          University Grants Commission (UGC), Government of India
-        </p>
-      </div>
-      <div class="card">
-        <h4>
-          MAG Solvics Private Limited
-        </h4>
-        <img src="../../../assets/partners/mag-solvics.png" alt="MAG Solvics Private Limited">
-        <p>
-          MAG was established in 1991 with an insight to design and develop testing instruments for Textile industry
+          {{client.desc}}
         </p>
       </div>
     </div>

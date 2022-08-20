@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import { Back, ScrollTrigger } from 'gsap/all';
 import { faCopyright, faCopy } from '@fortawesome/free-regular-svg-icons';
+import { clientData } from 'src/app/data/clients.data';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
   phone = faPhoneAlt
   paste = faCopy
   mail = faEnvelope
+  clients = clientData
   constructor() {
     gsap.registerPlugin(ScrollTrigger)
   }
